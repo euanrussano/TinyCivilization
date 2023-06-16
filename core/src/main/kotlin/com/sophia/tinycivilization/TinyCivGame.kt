@@ -3,6 +3,10 @@ package com.sophia.tinycivilization
 import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.Texture.TextureFilter.Linear
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.sophia.tinycivilization.view.LoadingScreen
+import com.sophia.tinycivilization.view.MainScreen
+import com.sophia.tinycivilization.view.MenuScreen
+import com.sophia.tinycivilization.view.PreferencesScreen
 import ktx.app.KtxGame
 import ktx.app.KtxScreen
 import ktx.app.clearScreen
@@ -12,8 +16,12 @@ import ktx.graphics.use
 
 class TinyCivGame : KtxGame<KtxScreen>() {
     override fun create() {
-        addScreen(FirstScreen())
-        setScreen<FirstScreen>()
+        addScreen(LoadingScreen(this))
+        addScreen(MenuScreen(this))
+        addScreen(PreferencesScreen(this))
+        addScreen(MainScreen(this))
+
+        setScreen<LoadingScreen>()
     }
 }
 
