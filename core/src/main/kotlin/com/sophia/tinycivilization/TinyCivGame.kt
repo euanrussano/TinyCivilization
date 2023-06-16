@@ -15,6 +15,8 @@ import ktx.assets.toInternalFile
 import ktx.graphics.use
 
 class TinyCivGame : KtxGame<KtxScreen>() {
+
+    val preferences = AppPreferences()
     override fun create() {
         addScreen(LoadingScreen(this))
         addScreen(MenuScreen(this))
