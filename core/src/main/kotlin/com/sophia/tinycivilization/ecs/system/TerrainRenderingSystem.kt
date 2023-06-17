@@ -22,10 +22,7 @@ class TerrainRenderingSystem(val assets : Assets, val batch: SpriteBatch, val vi
         Family.all(TerrainComponent::class.java, TransformComponent::class.java).get(),
         ZComparator()
     ) {
-
-    private val textures = mutableMapOf<String, TextureRegion>()
-
-
+    
     init {
     }
 
