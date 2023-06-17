@@ -26,7 +26,6 @@ class MainScreen(val game: TinyCivGame) : KtxScreen{
     private val viewport = FitViewport(20f, 20f)
 
     init {
-        game.assets.loadAssets()
     }
     override fun show() {
 

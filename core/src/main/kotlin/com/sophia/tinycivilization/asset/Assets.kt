@@ -13,11 +13,21 @@ class Assets {
     val grassTileSheetName = "Grass.png"
     val shoreTileSheetName = "Shore.png"
 
-    fun loadAssets(){
+    fun queueAddImages() {
         manager.load<Texture>(grassTileSheetName, Texture::class.java)
         manager.load<Texture>(shoreTileSheetName, Texture::class.java)
 
-        manager.finishLoading()
+    }
+
+    fun queueAddFonts() {
+
+    }
+
+    fun queueAddParticleEffects() {
+
+    }
+
+    fun setupAssets(){
 
         val grassTileSheet = TextureRegion(manager.get(grassTileSheetName, Texture::class.java)).split(16, 16)
         val shoreTileSheet = TextureRegion(manager.get(shoreTileSheetName, Texture::class.java)).split(16, 16)
@@ -27,6 +37,14 @@ class Assets {
 
     fun getTexture(textureName : String) : TextureRegion{
         return textures[textureName]!!
+    }
+
+    fun queueAddSounds() {
+
+    }
+
+    fun queueAddMusic() {
+
     }
 
 
